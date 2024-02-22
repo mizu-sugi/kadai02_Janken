@@ -112,6 +112,109 @@ function spinReels() {
 
     }
 
+    // 壱がそろったらスノーフォールを開始
+    if (result1 === '壱' && result2 === '壱' && result3 === '壱') {
+        jQuery(document).ready(function(){
+    jQuery(document).snowfall({
+	flakeCount : 30, //量、数
+	flakeColor : '#FFF', //色
+	flakeIndex : 1, //重なり
+	minSize : 15, //最小サイズ
+	maxSize : 100, //最大サイズ
+	minSpeed : 1, //最低スピード
+	maxSpeed : 5, //最大スピード
+	shadow : false, //形に影をつける
+	image : './yen.jpg' //オリジナル画像 
+});
+});
+    }
+
+
+    // 弐がそろったらスノーフォールを開始
+    if (result1 === '弐' && result2 === '弐' && result3 === '弐') {
+        jQuery(document).ready(function(){
+    jQuery(document).snowfall({
+	flakeCount : 30, //量、数
+	flakeColor : '#FFF', //色
+	flakeIndex : 1, //重なり
+	minSize : 15, //最小サイズ
+	maxSize : 100, //最大サイズ
+	minSpeed : 1, //最低スピード
+	maxSpeed : 5, //最大スピード
+	shadow : false, //形に影をつける
+	image : './yen.jpg' //オリジナル画像 
+});
+});
+    }
+
+    // 参がそろったらスノーフォールを開始
+    if (result1 === '参' && result2 === '参' && result3 === '参') {
+        jQuery(document).ready(function(){
+    jQuery(document).snowfall({
+	flakeCount : 30, //量、数
+	flakeColor : '#FFF', //色
+	flakeIndex : 1, //重なり
+	minSize : 15, //最小サイズ
+	maxSize : 100, //最大サイズ
+	minSpeed : 1, //最低スピード
+	maxSpeed : 5, //最大スピード
+	shadow : false, //形に影をつける
+	image : './yen.jpg' //オリジナル画像 
+});
+});
+    }
+
+    // 四がそろったらスノーフォールを開始
+    if (result1 === '四' && result2 === '四' && result3 === '四') {
+        jQuery(document).ready(function(){
+    jQuery(document).snowfall({
+	flakeCount : 30, //量、数
+	flakeColor : '#FFF', //色
+	flakeIndex : 1, //重なり
+	minSize : 15, //最小サイズ
+	maxSize : 100, //最大サイズ
+	minSpeed : 1, //最低スピード
+	maxSpeed : 5, //最大スピード
+	shadow : false, //形に影をつける
+	image : './yen.jpg' //オリジナル画像 
+});
+});
+    }
+
+    // 伍がそろったらスノーフォールを開始
+    if (result1 === '伍' && result2 === '伍' && result3 === '伍') {
+        jQuery(document).ready(function(){
+    jQuery(document).snowfall({
+	flakeCount : 30, //量、数
+	flakeColor : '#FFF', //色
+	flakeIndex : 1, //重なり
+	minSize : 15, //最小サイズ
+	maxSize : 100, //最大サイズ
+	minSpeed : 1, //最低スピード
+	maxSpeed : 5, //最大スピード
+	shadow : false, //形に影をつける
+	image : './yen.jpg' //オリジナル画像 
+});
+});
+    }
+
+    // 六がそろったらスノーフォールを開始
+    if (result1 === '六' && result2 === '六' && result3 === '六') {
+         jQuery(document).ready(function(){
+    jQuery(document).snowfall({
+	flakeCount : 30, //量、数
+	flakeColor : '#FFF', //色
+	flakeIndex : 1, //重なり
+	minSize : 15, //最小サイズ
+	maxSize : 100, //最大サイズ
+	minSpeed : 1, //最低スピード
+	maxSpeed : 5, //最大スピード
+	shadow : false, //形に影をつける
+	image : './yen.jpg' //オリジナル画像 
+});
+});
+    }
+
     // 1秒後にスピンボタンを有効にする
     setTimeout(() => {
         spinButton.disabled = false;
@@ -132,55 +235,12 @@ function playSound() {
     audio.play();
 }
 
-    // 壱がそろったらスノーフォールを開始
-    if (result1 === '壱' && result2 === '壱' && result3 === '壱') {
-        startSnowfall();
-    }
+    
+    
 
-    // 弐がそろったらスノーフォールを開始
-    if (result1 === '弐' && result2 === '弐' && result3 === '弐') {
-        startSnowfall();
-    }
+  
 
-    // 参がそろったらスノーフォールを開始
-    if (result1 === '参' && result2 === '参' && result3 === '参') {
-        startSnowfall();
-    }
 
-    // 四がそろったらスノーフォールを開始
-    if (result1 === '四' && result2 === '四' && result3 === '四') {
-        startSnowfall();
-    }
-
-    // 伍がそろったらスノーフォールを開始
-    if (result1 === '伍' && result2 === '伍' && result3 === '伍') {
-        startSnowfall();
-    }
-
-    // 六がそろったらスノーフォールを開始
-    if (result1 === '六' && result2 === '六' && result3 === '六') {
-        startSnowfall();
-    }
-
-    // 七がそろったらスノーフォールを開始
-    if (result1 === '七' && result2 === '七' && result3 === '七') {
-        startSnowfall();
-    }
-
-// スノーフォールの設定
-jQuery(document).ready(function(){
-    jQuery(document).snowfall({
-	flakeCount : 30, //量、数
-	flakeColor : '#FFF', //色
-	flakeIndex : 1, //重なり
-	minSize : 15, //最小サイズ
-	maxSize : 100, //最大サイズ
-	minSpeed : 1, //最低スピード
-	maxSpeed : 5, //最大スピード
-	shadow : false, //形に影をつける
-	image : './yen.jpg' //オリジナル画像 
-});
-});
 
 
  
