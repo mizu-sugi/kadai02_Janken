@@ -40,7 +40,7 @@
 }
 
 body {
-    background-image: url(./hananokeiji.jpg);
+    background-image: url(./img/hananokeiji.jpg);
     background-size: cover;
 }
 
@@ -57,8 +57,8 @@ body {
         <div class="reel" id="reel3"></div>
     </div>
     <div class="button-container" onclick="playSound()">
-        <button id="spin-btn"><img src="Spin-logo.jpg" width="300px" height="100px"></button>
-        <audio id="sound"><source src="./小パンチ.mp3"></audio>
+        <button id="spin-btn"><img src="./img/Spin-logo.jpg" width="300px" height="100px"></button>
+        <audio id="sound"><source src="./img/小パンチ.mp3"></audio>
     </div>
 
 
@@ -90,9 +90,9 @@ function spinReels() {
     const result3 = getRandomSymbol();
 
     // 結果を表示
-    displayResult(reel1, result1);
-    displayResult(reel2, result2);
-    displayResult(reel3, result3);
+   displayResult(reel1, result1);
+   displayResult(reel2, result2);
+   displayResult(reel3, result3);
 
   // 七がそろったらスノーフォールを開始
   if (result1 === '七' && result2 === '七' && result3 === '七') {
@@ -106,7 +106,7 @@ function spinReels() {
 	minSpeed : 1, //最低スピード
 	maxSpeed : 5, //最大スピード
 	shadow : false, //形に影をつける
-	image : './yen.jpg' //オリジナル画像 
+	image : './img/yen.jpg' //オリジナル画像 
 });
 });
 
@@ -124,7 +124,7 @@ function spinReels() {
 	minSpeed : 1, //最低スピード
 	maxSpeed : 5, //最大スピード
 	shadow : false, //形に影をつける
-	image : './yen.jpg' //オリジナル画像 
+	image : './img/yen.jpg' //オリジナル画像 
 });
 });
     }
@@ -142,7 +142,7 @@ function spinReels() {
 	minSpeed : 1, //最低スピード
 	maxSpeed : 5, //最大スピード
 	shadow : false, //形に影をつける
-	image : './yen.jpg' //オリジナル画像 
+	image : './img/yen.jpg' //オリジナル画像 
 });
 });
     }
@@ -159,7 +159,7 @@ function spinReels() {
 	minSpeed : 1, //最低スピード
 	maxSpeed : 5, //最大スピード
 	shadow : false, //形に影をつける
-	image : './yen.jpg' //オリジナル画像 
+	image : './img/yen.jpg' //オリジナル画像 
 });
 });
     }
@@ -176,7 +176,7 @@ function spinReels() {
 	minSpeed : 1, //最低スピード
 	maxSpeed : 5, //最大スピード
 	shadow : false, //形に影をつける
-	image : './yen.jpg' //オリジナル画像 
+	image : './img/yen.jpg' //オリジナル画像 
 });
 });
     }
@@ -193,7 +193,7 @@ function spinReels() {
 	minSpeed : 1, //最低スピード
 	maxSpeed : 5, //最大スピード
 	shadow : false, //形に影をつける
-	image : './yen.jpg' //オリジナル画像 
+	image : './img/yen.jpg' //オリジナル画像 
 });
 });
     }
@@ -210,7 +210,7 @@ function spinReels() {
 	minSpeed : 1, //最低スピード
 	maxSpeed : 5, //最大スピード
 	shadow : false, //形に影をつける
-	image : './yen.jpg' //オリジナル画像 
+	image : './img/yen.jpg' //オリジナル画像 
 });
 });
     }
