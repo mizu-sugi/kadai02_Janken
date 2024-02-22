@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+#slot-machine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    
+}
+
+.reels-container {
+    display: flex; /* リールを横に並べる */
+}
+
+.reel {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: fantasy;
+    font-weight: bold;
+    background-color: aliceblue;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url(./hananokeiji.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="slot-machine">
+        <div class="reel" id="reel1"></div>
+        <div class="reel" id="reel2"></div>
+        <div class="reel" id="reel3"></div>
+    </div>
+    <div class="button-container" onclick="playSound()">
+        <button id="spin-btn"><img src="Spin-logo.jpg" width="300px" height="100px"></button>
+        <audio id="sound"><source src="./小パンチ.mp3"></audio>
+    </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>"
+<script src="./JQuery-Snowfall-master/dist/snowfall.jquery.min.js"></script>
+
+    <script>
+const symbols = ['壱', '弐', '参', '四', '伍', '六', '七']; // リールのシンボル
+
+let reel1 = document.getElementById('reel1');
+let reel2 = document.getElementById('reel2');
+let reel3 = document.getElementById('reel3');
+const spinButton = document.getElementById('spin-btn');
+
+spinButton.addEventListener('click', spinReels);
+
+function spinReels() {
+    spinButton.disabled = true;
+
+       // 各リールを '七' に揃える
+    //const result1 = '七';
+    //const result2 = '七';
+    //const result3 = '七';
+
+    // 各リールをランダムに回転
+    const result1 = getRandomSymbol();
+    const result2 = getRandomSymbol();
+    const result3 = getRandomSymbol();
+
+    // 結果を表示
+    displayResult(reel1, result1);
+    displayResult(reel2, result2);
+    displayResult(reel3, result3);
+
+  // 七がそろったらスノーフォールを開始
+  if (result1 === '七' && result2 === '七' && result3 === '七') {
+    jQuery(document).ready(function(){
+    jQuery(document).snowfall({
+	flakeCount : 30, //量、数
+	flakeColor : '#FFF', //色
+	flakeIndex : 1, //重なり
+	minSize : 15, //最小サイズ
+	maxSize : 100, //最大サイズ
+	minSpeed : 1, //最低スピード
+	maxSpeed : 5, //最大スピード
+	shadow : false, //形に影をつける
+	image : './yen.jpg' //オリジナル画像 
+});
+});
+
+    }
+
+    // 1秒後にスピンボタンを有効にする
+    setTimeout(() => {
+        spinButton.disabled = false;
+    }, 1000);
+
+}
+
+function getRandomSymbol() {
+    return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+function displayResult(reel, symbol) {
+    reel.textContent = symbol;
+}
+
+function playSound() {
+    var audio = document.getElementById("sound");
+    audio.play();
+}
+
+    // 壱がそろったらスノーフォールを開始
+    if (result1 === '壱' && result2 === '壱' && result3 === '壱') {
+        startSnowfall();
+    }
+
+    // 弐がそろったらスノーフォールを開始
+    if (result1 === '弐' && result2 === '弐' && result3 === '弐') {
+        startSnowfall();
+    }
+
+    // 参がそろったらスノーフォールを開始
+    if (result1 === '参' && result2 === '参' && result3 === '参') {
+        startSnowfall();
+    }
+
+    // 四がそろったらスノーフォールを開始
+    if (result1 === '四' && result2 === '四' && result3 === '四') {
+        startSnowfall();
+    }
+
+    // 伍がそろったらスノーフォールを開始
+    if (result1 === '伍' && result2 === '伍' && result3 === '伍') {
+        startSnowfall();
+    }
+
+    // 六がそろったらスノーフォールを開始
+    if (result1 === '六' && result2 === '六' && result3 === '六') {
+        startSnowfall();
+    }
+
+    // 七がそろったらスノーフォールを開始
+    if (result1 === '七' && result2 === '七' && result3 === '七') {
+        startSnowfall();
+    }
+
+// スノーフォールの設定
+jQuery(document).ready(function(){
+    jQuery(document).snowfall({
+	flakeCount : 30, //量、数
+	flakeColor : '#FFF', //色
+	flakeIndex : 1, //重なり
+	minSize : 15, //最小サイズ
+	maxSize : 100, //最大サイズ
+	minSpeed : 1, //最低スピード
+	maxSpeed : 5, //最大スピード
+	shadow : false, //形に影をつける
+	image : './yen.jpg' //オリジナル画像 
+});
+});
+
+
+ 
+
+
+
+
+
+
+    </script>
+</body>
+</html>
